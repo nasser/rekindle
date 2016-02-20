@@ -2,7 +2,7 @@
 Hackable E-ink Tablets For Everyone
 
 ## Status
-Extremely early, extremely unstable, extremely experimental. To use it at this stage you will need knowledge of cross compilers and embedded Linux development. I am working on a more reproducible build/installation process, but that is a ways off.
+Extremely early, extremely unstable, extremely experimental. To use it at this stage you will need knowledge of cross compilers and embedded Linux development, and the build scripts *will not work for you without additional work on your end*. I am working on a more reproducible build/installation process, but that is a ways off.
 
 ## Specs
 * Freescale i.MX508 800 MHz processor
