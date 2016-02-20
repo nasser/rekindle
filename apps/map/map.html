@@ -1,0 +1,48 @@
+<!-- http://leafletjs.com/examples/quick-start.html -->
+<html>
+<head>
+  <meta charset="utf8">
+  <title></title>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+  <link rel="stylesheet" href="keyboard.css" />
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+  <style type="text/css">
+  body { margin: 0; padding: 0; cursor: none !important; }
+  #map { height: 100%; width: 100%; margin: 0; padding: 0; }
+  #in {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  </style>
+  <script type="text/javascript">
+  function get(theUrl) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+  }
+  
+  function getJson (url) {
+    return JSON.parse(get(url));
+  }
+  
+  window.onload = function() {
+    // replace "toner" here with "terrain" or "watercolor"
+    var layer = new L.StamenTileLayer("toner");
+    var map = new L.Map("map", {
+      scrollWheelZoom: false,
+      center: new L.LatLng(40.707734, -74.003387),
+      zoom: 15
+    });
+    
+    map.addLayer(layer);
+  }
+  </script>
+</head>
+<body>
+   <div id="map"></div>
+</body>
+</html>
