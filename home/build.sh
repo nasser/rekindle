@@ -1,0 +1,2 @@
+export PKG_CONFIG_PATH=/opt/X11/lib/pkgconfig
+/Volumes/crosstools/x-tools/arm-kindle-linux-gnueabi/bin/arm-kindle-linux-gnueabi-gcc -O3 home.c -o home `pkg-config --cflags gtk+-2.0` -I headers/usr/include/directfb -I headers/usr/include -I headers/webkitgtk-2.8.4/Source/WebKit2/UIProcess/API -I ./include -L libs -Wl,-rpath-link libs -L libs -Wl,-rpath-link libs -lgobject-2.0 -lgtk-x11-2.0 -lglib-2.0 -lwebkitgtk-1.0 -lgdk-x11-2.0
